@@ -1,0 +1,23 @@
+server:
+    port: 8088
+    servlet:
+        context-path: /api
+spring:
+    jpa:
+        properties:
+            hibernate:
+                event:
+                    merge:
+                        entity_copy_observer: allow
+        open-in-view: off
+ura:
+    accessKey: <replaceme>
+    baseUrl: https://www.ura.gov.sg/uraDataService
+    batchEnd: 4
+    batchStart: 1
+    persistUraResponse: true
+    propTransactionUrl: ${ura.baseUrl}/invokeUraDS?service=PMI_Resi_Transaction&batch=%s
+    retryIntervalMultiplier: 2
+    requestRetryInterval: 120
+    requestRetryTimes: 10
+    tokenUrl: ${ura.baseUrl}/uraDataService/insertNewToken.action

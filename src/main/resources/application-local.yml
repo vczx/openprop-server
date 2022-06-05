@@ -1,0 +1,13 @@
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        username: openprop
+        password: adminadmin
+        url: jdbc:mysql://localhost:3306/openprop
+    jpa:
+        database-platform: org.hibernate.dialect.MySQL8Dialect
+        generate-ddl: true
+        hibernate:
+            ddl-auto: update
+ura:
+    uraResponseSavePath: E:/_appdev/sources/openprop/data
